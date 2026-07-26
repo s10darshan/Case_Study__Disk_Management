@@ -1,0 +1,68 @@
+\subsection*{NVMe Components}
+
+NVMe (Non-Volatile Memory Express) consists of hardware, software, and system-level components that work together to provide high-speed communication between the operating system and solid-state drives.
+
+\subsubsection*{Hardware Components}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+Component &
+  Description \\ \hline
+NVMe Controller &
+  \begin{tabular}[c]{@{}l@{}}The controller is the main processing unit of the SSD. It executes\\ commands, manages data transfers, performs error correction,\\ and coordinates communication between the host system and\\ NAND flash memory.\end{tabular} \\ \hline
+NAND Flash Memory &
+  \begin{tabular}[c]{@{}l@{}}The primary non-volatile storage medium used to permanently\\ store user data. Common types include SLC, MLC, TLC, and QLC,\\ each providing different levels of speed, endurance, and storage\\ capacity.\end{tabular} \\ \hline
+DRAM Cache &
+  \begin{tabular}[c]{@{}l@{}}A high-speed memory buffer that stores frequently accessed data\\ and logical-to-physical address mapping tables, improving SSD\\ performance and reducing access latency.\end{tabular} \\ \hline
+PCIe Interface &
+  \begin{tabular}[c]{@{}l@{}}Provides a high-bandwidth communication link between the SSD\\ and the motherboard, enabling significantly faster data transfer\\ than the SATA interface.\end{tabular} \\ \hline
+Power Management Unit &
+  \begin{tabular}[c]{@{}l@{}}Regulates power consumption, supports multiple power-saving\\ states, and protects stored data during unexpected power\\ interruptions.\end{tabular} \\ \hline
+Form Factor &
+  \begin{tabular}[c]{@{}l@{}}Represents the physical design of the SSD. Common form factors\\ include M.2, U.2, and Add-in Card (AIC), each designed for different\\ computer systems.\end{tabular} \\ \hline
+\end{tabular}
+\caption{Hardware Components of NVMe}
+\label{tab:hardware table}
+\end{table}
+
+\subsubsection*{Software and Protocol Components}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+Component &
+  Description \\ \hline
+Submission Queue &
+  \begin{tabular}[c]{@{}l@{}}Stores I/O commands issued by the operating system before they are\\ processed by the NVMe controller. Multiple queues enable highly\\ parallel command execution.\end{tabular} \\ \hline
+Completion Queue &
+  \begin{tabular}[c]{@{}l@{}}Returns the execution status and results of completed commands\\ back to the operating system.\end{tabular} \\ \hline
+NVMe Commands &
+  \begin{tabular}[c]{@{}l@{}}A standardized command set consisting of administrative commands\\ for device management and I/O commands for reading, writing, and\\ flushing data.\end{tabular} \\ \hline
+Registers &
+  \begin{tabular}[c]{@{}l@{}}Memory-mapped control and status registers that allow the operating\\ system to configure, monitor, and communicate with the NVMe\\ controller.\end{tabular} \\ \hline
+Namespaces &
+  \begin{tabular}[c]{@{}l@{}}Logical storage partitions that allow a single NVMe drive to present one\\ or more independent storage devices to the operating system.\end{tabular} \\ \hline
+Firmware &
+  \begin{tabular}[c]{@{}l@{}}Embedded software that controls NAND management, wear leveling,\\ garbage collection, bad block management, and error correction.\end{tabular} \\ \hline
+\end{tabular}
+\caption{Software Components of NVMe}
+\label{tab:software table}
+\end{table}
+
+\subsubsection*{System-Level Components}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+Component & Description \\ \hline
+NVMe Driver &
+  \begin{tabular}[c]{@{}l@{}}Operating system software that initializes the NVMe device, creates\\ queues, manages interrupts, and translates storage requests into\\ NVMe commands.\end{tabular} \\ \hline
+File System Interface &
+  \begin{tabular}[c]{@{}l@{}}Provides a standard block device abstraction that enables\\ applications to access NVMe storage using common file systems such\\ as NTFS, ext4, and APFS.\end{tabular} \\ \hline
+DMA Engine &
+  \begin{tabular}[c]{@{}l@{}}Transfers data directly between the SSD and system memory without\\ continuous CPU involvement, reducing processor overhead and\\ improving overall system performance.\end{tabular} \\ \hline
+\end{tabular}
+\caption{System-Level Components of NVMe}
+\label{tab:system-level table}
+\end{table}
