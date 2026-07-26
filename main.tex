@@ -14,8 +14,9 @@
 \usepackage{hyperref}
 
 \doublespacing
+\emergencystretch=2em
 
-
+\includeonly{ssd-intro}
 \begin{document}
 
 \newpage
@@ -67,6 +68,12 @@ exploring how device drivers, I/O scheduling, and file systems are designed to i
 \include{nvme-components}
 
 \input{nvme-memory_cell}
+
+\include{nvme-with_os}
+
+\include{nvme-limitations}
+
+\include{ssd-intro}
 \newpage
 \printbibliography
 \end{document}

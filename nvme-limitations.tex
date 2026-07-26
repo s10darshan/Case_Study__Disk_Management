@@ -1,0 +1,28 @@
+\subsection*{Limitations of NVMe:}
+\textbf{Program/Erase Cycles and Wear Leveling:}
+
+
+NAND flash memory has a limited number of Program/Erase (P/E) cycles, meaning each memory cell gradually degrades after repeated write and erase operations. As a result, SSDs have a finite lifespan compared to volatile memory. To address this limitation, SSD controllers implement wear leveling, which evenly distributes write operations across all memory cells. This prevents excessive wear on specific blocks, improves reliability, and extends the overall lifespan of the SSD.
+\cite{lexar_nvme}
+\section{Comparison of Drives}
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Basis} & \textbf{HDD} & \textbf{SATA SSD} & \textbf{NVMe SSD} \\
+\hline
+Storage Medium & Magnetic Disk & NAND Flash & NAND Flash \\
+\hline
+Interface & SATA & SATA & PCIe \\
+\hline
+Typical Speed & 100--200 MB/s & Up to 550 MB/s & 3,000--14,000 MB/s \\
+\hline
+Latency & High (ms) & Low ($\mu$s) & Very Low ($\mu$s) \\
+\hline
+Performance & Slow & Fast & Very Fast \\
+\hline
+\end{tabular}
+\caption{Comparison of HDD, SATA SSD, and NVMe SSD}
+\label{tab:hdd_ssd_nvme}
+\end{table}

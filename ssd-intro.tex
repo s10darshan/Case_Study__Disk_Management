@@ -1,0 +1,29 @@
+\section*{Solid-State Drive (SSD) Technology}
+A Solid-State Drive (SSD) is a non-volatile storage device that stores digital data using NAND flash memory
+rather than magnetic platters. Unlike Hard Disk Drives (HDDs), SSDs contain no moving mechanical parts,
+enabling significantly faster data access, lower latency, reduced power consumption, and improved durability.
+SSDs have become the preferred storage solution for modern laptops, desktops, servers, and embedded systems
+because they provide high performance while maintaining reliability and energy efficiency [1, 3].
+SSDs communicate with the host computer through storage interfaces such as Serial ATA (SATA) and PCI
+Express (PCIe). SATA SSDs use the AHCI protocol originally designed for HDDs, whereas newer SSDs may
+use the NVMe protocol over PCIe for even higher performance. Regardless of interface, the fundamental
+storage mechanism of SSDs remains based on NAND flash memory [4].
+
+\subsubsection{Physical Infrastructure}
+
+
+\begin{enumerate}[label=\roman*.]
+    \item NAND Flash Memory
+    The primary storage medium in an SSD consists of NAND flash memory chips. These chips permanently store
+    data without requiring continuous electrical power [3].
+   \item  SSD Controller
+    The SSD controller acts as the brain of the drive. It manages read and write operations, error correction, garbage
+    collection, wear leveling, logical-to-physical address mapping, and communication with the operating system
+    [4, 6].
+    \item DRAM Cache (Optional)
+    Many SSDs include a DRAM cache that stores frequently accessed mapping information and temporary data,
+    reducing access latency and improving performance [4].
+    \item Interface Connector
+    Consumer SSDs commonly connect through SATA connectors or M.2 slots, depending on the drive type.
+    Enterprise SSDs may also use U.2 or PCIe expansion card interfaces [4].
+\end{enumerate}
