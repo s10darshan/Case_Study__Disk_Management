@@ -1,0 +1,28 @@
+\subsection{Operational Mechanism of Hard Disk Drives (HDD)}
+
+The operation of an HDD relies on a synchronized process of mechanical rotation and magnetic signaling \cite{gfg_hdd_memory, wiki_hdd}:
+\begin{enumerate}
+    \item \textbf{Rotation:} The spindle motor spins the platters at high speeds, typically ranging from 4,200 to 15,000 RPM in modern drives \cite{gfg_hdd_memory, wiki_hdd}. This rotation creates an air cushion that allows the heads to "fly" nanometers above the magnetic surface \cite{wiki_hdd}.
+    \item \textbf{Positioning:} When the computer requests data, the actuator arm moves the read/write head to the specific track containing the information \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Magnetic Recording:} Data is stored by magnetizing the thin film on the platters. Sequential changes in the direction of magnetization represent binary data bits, often encoded using schemes like run-length limited (RLL) encoding \cite{wiki_hdd}.
+    \item \textbf{Processing:} The disk controller manages the movement of the actuator, processes the raw magnetic signals into digital data using digital signal processors (DSP), and transfers it to the computer's interface \cite{gfg_hdd_memory, wiki_hdd}.
+\end{enumerate}
+
+\subsection{HDD Form Factors}
+
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{3.5-inch:} 
+    The most common form factor for desktop computers and enterprise storage systems \cite{wiki_hdd, gfg_hdd_memory}.
+     These drives typically contain one to five internal platters and are optimized for high capacity, with modern units
+     reaching up to 36TB \cite{wiki_hdd}.
+
+    \item \textbf{2.5-inch:} Primarily utilized in laptops, portable external drives, and some high-density servers 
+    \cite{wiki_hdd, gfg_hdd_memory}. These drives are smaller and more energy-efficient but generally offer lower total 
+    capacity than 3.5-inch models because they typically utilize fewer platters \cite{wiki_hdd}.
+    
+    \item \textbf{Enterprise Form Factors:} 
+    Enterprise drives usually use the same 3.5-inch
+    or 2.5-inch sizes, but they are designed for continuous operation, higher reliability,
+    and server-optimized performance \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Obsolete Factors:} Smaller form factors, such as 1.8-inch, 1.3-inch, 1-inch, and 0.85-inch, have been discontinued or rendered obsolete due to the superior performance and falling costs of flash memory (SSDs) in mobile devices \cite{wiki_hdd}.
+\end{enumerate}

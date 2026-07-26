@@ -1,0 +1,24 @@
+\subsection{Limitations of HDD Technology}
+
+\subsubsection{Mechanical Latency and Speed}
+The performance of an HDD is capped by the physical movement of its components. The "Average Access Time" is restricted by:
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Seek Time:} The time required for the actuator arm to move the read/write head to the correct track \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Rotational Latency:} The time spent waiting for the specific data sector to rotate under the head \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Physical Limits:} Rotational speeds are limited by heat and vibration; while high-performance servers use 15,000 RPM drives, most consumer drives remain at 5,400 or 7,200 RPM to manage these factors \cite{wiki_hdd}.
+\end{enumerate}
+
+\subsubsection{Durability and Reliability}
+Because HDDs rely on rapidly spinning platters and heads flying only nanometers above the surface, they are highly susceptible to physical failure:
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Fragility:} Moving parts make HDDs prone to "head crashes" if the device is dropped or subjected to physical shock, which can lead to permanent data loss \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Environmental Sensitivity:} Operation can be impacted by air density; for instance, standard HDDs may fail at high altitudes (above 3,000m) because the air is too thin to provide the necessary "lift" for the heads, though sealed helium-filled drives mitigate this \cite{wiki_hdd}.
+    \item \textbf{Mechanical Wear:} Over time, the spindle motors and actuator arms can wear out, leading to eventual hardware failure \cite{gfg_hdd_memory}.
+\end{enumerate}
+
+\subsubsection{Operational Overhead}
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Power Consumption:} The energy required to spin physical platters makes HDDs significantly less power-efficient than SSDs \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Noise and Heat:} The friction and mechanical movement generate audible noise and substantial heat, requiring robust system cooling \cite{gfg_hdd_memory, wiki_hdd}.
+    \item \textbf{Fragmentation:} HDDs suffer significantly from file fragmentation, where scattered data forces the read/write head to move excessively, further slowing down access times \cite{gfg_disk_mgmt, wiki_hdd}.
+\end{enumerate}
