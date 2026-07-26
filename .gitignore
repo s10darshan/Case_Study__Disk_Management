@@ -1,0 +1,72 @@
+# === LaTeX auxiliary files ===
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.lb
+
+# === latexmk ===
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# === biblatex / biber ===
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# === build tool directories ===
+*.synctex.gz(busy)
+*.svg.pdf
+auto/
+_minted*/
+
+# === Counters, cross-references, hyperref ===
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.idx
+*.ind
+*.ilg
+
+# === TikZ / pgf externalization ===
+*.figlist
+*.makefile
+*.dpth
+*.md5
+*-figure0.*
+*-figure1.*
+*-figure*.md5
+*-figure*.dpth
+*-figure*.pdf
+*-figure*.log
+
+# === TeX Live / editor scratch files ===
+*.synctex
+*.nav
+*.snm
+*.vrb
+
+# === VS Code (LaTeX Workshop) ===
+.vscode/settings.json.bak
+
+# === OS junk ===
+.DS_Store
+Thumbs.db
+
+# === Compiled output (keep the PDF out unless you want it versioned) ===
+main.pdf
