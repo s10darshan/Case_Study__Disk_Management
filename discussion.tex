@@ -1,0 +1,33 @@
+\section{Discussion}
+The comparative analysis of HDD, SATA SSD, and NVMe SSD technologies presented 
+in this study highlights a clear evolutionary trajectory in storage system design, 
+driven primarily by the need to eliminate mechanical bottlenecks and better exploit 
+the parallelism available in modern processors. While HDDs remain relevant for high-capacity, 
+cost-sensitive storage due to their low cost per gigabyte, their reliance on mechanical 
+components fundamentally limits their performance and reliability compared to flash-based alternatives.
+
+The transition from SATA-based SSDs to NVMe represents more than an incremental interface 
+upgrade; it reflects a re-architecture of how the operating system communicates with storage. 
+By moving from a single command queue with a shallow queue depth to tens of thousands of 
+parallel queues, NVMe allows the operating system to fully utilize the throughput offered 
+by the PCIe bus and the multi-core nature of modern CPUs. This has direct implications for 
+I/O scheduling, since traditional seek-time-minimizing algorithms designed for HDDs become 
+largely irrelevant for both SATA SSDs and NVMe drives, prompting operating systems to adopt 
+simpler, fairness-oriented scheduling policies.
+
+At the same time, the study shows that all three technologies still depend on the operating 
+system for essential services such as partitioning, file system management, and error 
+handling, even though the specific mechanisms differ significantly. For flash-based storage, 
+TRIM support, wear leveling, and garbage collection place additional responsibilities on 
+both the drive controller and the operating system to preserve long-term performance and 
+endurance, responsibilities that have no HDD equivalent.
+
+From a practical standpoint, the findings suggest that storage technology selection should 
+be guided by workload characteristics rather than by a single performance metric. High-capacity 
+archival systems continue to benefit from HDDs, latency-sensitive consumer and enterprise 
+workloads increasingly favor SATA or NVMe SSDs, and data-intensive applications such as 
+databases, virtualization, and artificial intelligence workloads benefit most from NVMe's 
+high queue depth and low latency. This reinforces the broader trend in the industry toward 
+hybrid storage architectures that combine multiple technologies to balance cost, capacity, 
+and performance.
+

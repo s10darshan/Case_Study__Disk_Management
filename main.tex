@@ -2,6 +2,7 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{soul}
+\usepackage{secdot}
 \usepackage{graphicx}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{CITATIONS.bib}
@@ -13,10 +14,10 @@
 \setlength{\parskip}{1em}
 \usepackage{hyperref}
 
-\doublespacing
+\onehalfspacing
 \emergencystretch=2em
 
-\includeonly{ssd-intro}
+
 \begin{document}
 
 \newpage
@@ -47,6 +48,7 @@ explores how the operating system interacts with each of these storage types, an
 appropriately used. By the end of this study, the reader will have a clear understanding of how disk storage technologies have evolved and why choosing 
 the right storage medium matters in modern computing.
 
+\newpage
 \section{Objective}
 
 The objective of this case study is to understand how different disk storage technologies — HDD, SSD, and NVMe — are managed by the operating system, 
@@ -60,6 +62,13 @@ exploring how device drivers, I/O scheduling, and file systems are designed to i
 \include{hdd-limitations}
 \newpage
 \include{hdd-os_interaction}
+\include{ssd-intro}
+
+\include{ssd-mechanism}
+
+\include{ssd-form_factor-image}
+
+\include{ssd-os_interaction}
 
 \include{nvme-intro}
 
@@ -67,13 +76,15 @@ exploring how device drivers, I/O scheduling, and file systems are designed to i
 
 \include{nvme-components}
 
-\input{nvme-memory_cell}
 
 \include{nvme-with_os}
 
 \include{nvme-limitations}
 
-\include{ssd-intro}
+\include{comparison_of_drives}
+\include{discussion}
+
+\include{conclusion}
 \newpage
 \printbibliography
 \end{document}

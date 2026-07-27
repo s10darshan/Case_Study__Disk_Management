@@ -1,4 +1,4 @@
-\subsection*{Operating System Interaction with NVMe SSD}
+\subsection{Operating System Interaction with NVMe SSD}
 The operating system communicates with an NVMe SSD through a layered I/O architecture. When an application issues a read or write request, it passes through the Virtual File System (VFS), block I/O layer, and I/O scheduler before reaching the NVMe driver. The driver converts the request into NVMe commands, places them in submission queues, and transfers them to the SSD controller over the PCIe interface using Direct Memory Access (DMA). The controller processes the commands, accesses the NAND flash memory through the Flash Translation Layer (FTL), and performs functions such as wear leveling, garbage collection, and error correction. After the operation is completed, the controller updates the completion queue and notifies the operating system through an interrupt. This queue-based architecture enables efficient parallel processing of I/O requests, resulting in lower latency and higher throughput than traditional SATA-based storage devices.
 
 \begin{figure}[H]
@@ -8,4 +8,14 @@ The operating system communicates with an NVMe SSD through a layered I/O archite
     \cite{_nvme_architecture}
     \label{fig: nvme and os } 
 \end{figure}
-\newpage
+
+\subsection{Limitations of NVMe:}
+\textbf{Program/Erase Cycles and Wear Leveling:}
+
+
+NAND flash memory has a limited number of Program/Erase (P/E) cycles, meaning each memory cell 
+gradually degrades after repeated write and erase operations. As a result, SSDs have a finite 
+lifespan compared to volatile memory. To address this limitation, SSD controllers implement wear 
+leveling, which evenly distributes write operations across all memory cells. This prevents excessive 
+wear on specific blocks, improves reliability, and extends the overall lifespan of the SSD.
+\cite{lexar_nvme}

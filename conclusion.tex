@@ -1,0 +1,22 @@
+\section{Conclusion}
+This case study has examined the architecture, operational principles, and 
+operating system interaction of three major disk storage technologies: HDD, 
+SATA SSD, and NVMe SSD. The findings confirm that while HDDs remain a cost-effective 
+solution for bulk storage, their mechanical design imposes inherent limitations on 
+speed, reliability, and power efficiency. SSDs address many of these limitations 
+through NAND flash memory, though SATA-based SSDs are still constrained by an 
+interface and command protocol originally designed for mechanical drives.
+
+NVMe represents the most significant advancement examined in this study, as it 
+was purpose-built to exploit the capabilities of flash memory and the PCIe bus. 
+Through its highly parallel queue-based architecture, NVMe substantially reduces 
+latency and increases throughput compared to both HDDs and SATA SSDs, making it 
+the preferred choice for performance-critical and data-intensive applications.
+
+Understanding how the operating system manages each storage technology, from file 
+system creation and partitioning to specialized functions such as TRIM, wear leveling, 
+and disk scheduling, is essential for making informed decisions about system design and 
+storage selection. As storage demands continue to grow with the expansion of cloud computing, 
+artificial intelligence, and big data applications, NVMe and its extensions, such as NVMe over 
+Fabrics, are expected to play an increasingly central role in meeting the performance 
+requirements of modern computing systems.
